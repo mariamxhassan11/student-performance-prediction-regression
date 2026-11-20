@@ -1,0 +1,59 @@
+{
+    "project_title": "Student Performance Index Regression",
+    "task_type": "regression",
+    "target_column": "performance_index",
+    "best_model_name": "Ridge",
+    "numeric_features": [
+        "hours_studied",
+        "previous_scores",
+        "sleep_hours",
+        "sample_question_papers_practiced",
+        "attendance_rate"
+    ],
+    "categorical_features": [
+        "extracurricular_activities"
+    ],
+    "feature_ranges": {
+        "hours_studied": {
+            "min": 1,
+            "max": 9,
+            "default": 5,
+            "dtype": "int"
+        },
+        "previous_scores": {
+            "min": 40,
+            "max": 99,
+            "default": 70,
+            "dtype": "int"
+        },
+        "sleep_hours": {
+            "min": 4,
+            "max": 9,
+            "default": 7,
+            "dtype": "int"
+        },
+        "sample_question_papers_practiced": {
+            "min": 0,
+            "max": 9,
+            "default": 4,
+            "dtype": "int"
+        },
+        "attendance_rate": {
+            "min": 60.0,
+            "max": 100.0,
+            "default": 79.05,
+            "dtype": "float"
+        }
+    },
+    "categorical_options": {
+        "extracurricular_activities": [
+            "Yes",
+            "No"
+        ]
+    },
+    "metrics": {
+        "r2": 0.9131,
+        "mae": 6.15,
+        "rmse": 9.97
+    }
+}
